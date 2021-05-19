@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from 'react-redux'
 import { setUserDetails } from './UserSlice'
 import { useHistory } from 'react-router'
 import Input from './Input'
-import DropDown from './DropDown';
+import Select from './Select'
 
 function Home() {
     const dispatch=useDispatch();
@@ -25,7 +25,7 @@ function Home() {
     const [pc,setPc]=useState('');
     const [es,setEs]=useState('');
     const [ai,setAi]=useState('');
-
+    
     const handleSubmit=(e)=>{
         e.preventDefault();
         if(t && fname && lname && dob && hno && pc && es && ai)
@@ -49,7 +49,7 @@ function Home() {
             <div className="f">
             <form onSubmit={(e)=>handleSubmit(e)}>
                 <div className="form-group">
-                    <DropDown type="Title" labelName="Title" className="form-control-d" onChange={e=>setT(e.target.value)} name={title}/>
+                    <Select type="Title" labelName="Title" className="form-control-d" onChange={e=>setT(e.target.value)} name={title}/>
                 </div>
                 <div className="form-group">
                     <Input type="text" labelName="First name" className="form-control-i" onChange={e=>setFname(e.target.value)} name={firstName}/>
@@ -67,7 +67,7 @@ function Home() {
                     <Input type="text" labelName="Postcode" className="form-control-i" onChange={e=>setPc(e.target.value)} name={postCode}/>
                 </div>
                 <div className="form-group">
-                    <DropDown type="Employment Status" labelName="Employment Status" className="form-control-d"  onChange={e=>setEs(e.target.value)} name={employmentStatus}/>
+                    <Select type="Employment Status" labelName="Employment Status" className="form-control-d"  onChange={e=>setEs(e.target.value)} name={employmentStatus}/>
                 </div>
                 <div className="form-group">
                     <Input type="text" labelName="Annual Income" className="form-control-i" onChange={e=>setAi(e.target.value)} name={annualIncome}/>

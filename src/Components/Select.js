@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Select = ({type,labelName,className,onChange,name}) => {
+const Select = ({ type, id, labelName, className, onChange, name, value }) => {
     const t_options=[
         { id: "mr", name: "Mr" },
         { id: "mrs", name: "Mrs" },
@@ -24,7 +24,7 @@ const Select = ({type,labelName,className,onChange,name}) => {
             return(
                 <div>
                     <label htmlFor={name} style={{display: "inline-block", width: "160px", textAlign: "left"}}>{labelName}</label>
-                    <select className={className} onChange={onChange}>
+                    <select id={id} name={name} className={className} onChange={onChange} value={value}>
                         <option>Please select...</option>
                         {t_options.map((op) => <option key={op.id}>{op.name}</option>)}
                     </select>
@@ -34,14 +34,14 @@ const Select = ({type,labelName,className,onChange,name}) => {
             return(
                 <div>
                     <label htmlFor={name} style={{display: "inline-block", width: "160px", textAlign: "left"}}>{labelName}</label>
-                    <select className={className} onChange={onChange}>
+                    <select id={id} name={name} className={className} onChange={onChange} value={value}>
                         <option>Please select...</option>
                         {es_options.map((op) => <option key={op.id}>{op.name}</option>)}
                     </select>
                 </div>
             )
         default:
-                return null;
+            return null
     }
 };
 

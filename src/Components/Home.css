@@ -1,7 +1,6 @@
 .wrapper {
-    padding: 60px 20px;
+    padding: 20px 20px;
     overflow: hidden;
-    height:80vh;
     font: normal 18px/1.5 "Fira Sans", "Helvetica Neue", sans-serif;
 }
 
@@ -11,14 +10,10 @@
 
 .f{
     width: 421.7px;
-    height:515px;
     border-radius: 5.5px;
     margin-left: 0%;
     background-color: #ffffff;
     box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.15);
-    padding-top:38px;
-    padding-left:38px;
-    padding-right:38px;
 }
 
 .form-group{
@@ -56,7 +51,16 @@
     box-sizing: border-box;
 }
 
+.error{
+    color: red;
+}
+
 .btn{
     background-color: rgb(136, 136, 223);
     color: white;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font: normal 18px/1.5 "Fira Sans", "Helvetica Neue", sans-serif;
 }

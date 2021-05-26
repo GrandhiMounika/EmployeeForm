@@ -2,13 +2,12 @@ import React from 'react';
 import { useSelector } from 'react-redux'
 
 function Details() {
-    const data=useSelector(state=>state.user);
+    const data=useSelector(state=>state.user)
     if(window.performance){
         if(performance.navigation.type===1){
             window.location.assign('/')
         }
     }
-    
     return (
         <div style={{font: "normal 18px/1.5 Fira Sans, Helvetica Neue, sans-serif"}}>
             <h1>Employee Details</h1>
